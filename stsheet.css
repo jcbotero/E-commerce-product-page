@@ -1,0 +1,683 @@
+body{
+    max-width: 100vw;
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+    font-family: "kum";
+    z-index: 3;
+  }
+
+@font-face {
+    font-family: kum;
+    src: url("./KumbhSans-VariableFont_wght.ttf");
+  }
+
+  .black {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 140%;
+    background: black;
+    opacity: 0.5;
+    z-index: 20;
+  }  /* este es el code para el div que me cubre toda la screen y me la oscurece*/
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 4% 9%;
+    padding-bottom: 2%;
+    border-bottom: 0.1ch solid hsl(210, 4%, 91%); /* para colocar border solo a un lado*/
+  }
+
+  .breadcrumbs {
+    position: absolute;
+    width: 33%;
+    display: inline-flex;
+    justify-content: space-around;
+    margin: -1% 0% 0% 14%;
+    color: hsl(219, 9%, 45%);
+    font-weight: 500;
+  }
+  
+  .breadcrumbs p:hover {
+    cursor: url("pointer.png"), auto;
+    color: black;
+    font-weight: 700;
+    border-bottom: 0.5ch solid hsl(26, 100%, 55%); 
+    padding-bottom: 9%;
+  } /* con position absolute en div parent y padding bottom creo este border*/
+
+  .menu {
+    display: none;
+  }
+
+  #close2 {
+    display: none;
+  }
+
+  .car {
+    margin-right: -4%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .car div:hover {
+    cursor: url("pointer.png"), auto;
+  }
+
+  .cardhop  {
+    margin: 0% 0% 0% -30%;
+  }
+
+  .avatar img {
+    width: 50%;
+    margin: -15% 0% 0% 0%;
+  }
+
+  #globo {
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 50%;
+    position: absolute;
+    height: 15px;
+    width: 1%;
+    font-size: 10px;
+    z-index: 50;
+    margin-left: -1.8%;
+    margin-top: -0.5%;
+    color: white;
+    text-align: center;
+  }
+   
+  #span1 {
+    color: black;
+    font-weight: 700;
+  }
+
+  nav {
+    width: 23%;
+    height: 35%;
+    position: absolute;
+    z-index: 50;
+    background-color: white;
+    margin: -4% 0% 0% 62%;
+    filter: drop-shadow(2px 15px 15px rgba(139, 139, 139, 0.4)); /* asi añado sombra sombre un svg no sé sobre otras imágenes*/
+  }
+
+  nav .pa {
+    color: black;
+    font-size: 17px;
+    border-bottom: 0.1ch solid hsl(210, 4%, 91%); 
+    padding-left: 4%;
+    font-weight: 900;
+    padding-bottom: 6%;
+  }
+
+  nav .pb {
+    text-align: center;
+    color: hsl(219, 9%, 45%);
+    font-weight:bolder;
+    padding-top: 20%;
+  }
+
+  #cartfull {
+    margin: 10% 5%;
+  }
+  
+  #cartfull p {
+    padding: 0% 5%;
+    color: hsl(219, 9%, 45%) ;
+    font-weight: 500;
+  }
+
+  .cart1 {
+    display: inline-flex;
+  }
+  
+  .cart1 img {
+    max-width: 20%;
+    height: 12%;
+  }
+
+  #delete {
+   height: 25%;
+   padding: 8% 0%;
+   cursor: url("pointer.png"), auto;
+  }
+
+  #btncheck {
+   margin: 5% 0%;
+   width: 100%;
+   height: 60px;
+  }
+
+  main {
+    display: inline-flex;
+    margin: 2% 12% ;
+  }
+
+  #icons {
+    display: none;
+  }
+
+  .icons {
+    margin: 15% 10% 10% 16%;
+    position: absolute;
+    display: flex;
+    z-index: 100;
+    width: 7%;
+    height: 9%;
+  }
+
+  .icons div {
+    position: relative;
+   padding: 25%;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 480%;
+  }
+
+  .icons div img:hover {
+    filter: invert(77%) sepia(35%) saturate(6754%) hue-rotate(359deg) brightness(105%) contrast(112%);
+    cursor: url("pointer.png"), auto;
+  } /* cuadno coloco un svg en html como <img> y no le puedo cambiar el color con fill.. usando filter puedo hacerlo*/
+    /* https://codepen.io/sosuke/pen/Pjoqqp aqui tengo un filter generator para encontrar el que necesito*/
+ 
+   #close {
+    position: absolute;
+    margin-top: -6%;
+    margin-left: 55%;
+    z-index: 50;
+  }
+
+  #close svg {
+    fill: white;
+  }
+
+  
+  #close svg:hover {
+    fill:  hsl(26, 100%, 55%);
+    cursor: url("pointer.png"), auto;
+  }
+  
+  #imgg2 {
+    display: none;
+  }
+
+  .img2  {
+    display: flex;
+    max-width: 38%;
+    position: absolute;
+    z-index: 70;
+    margin: -36% 20% 20% 18%;
+  } /* imagen grande que no se muestra hasta el doble click*/
+
+  #bb img, #cc img, #dd img{
+    max-width: 100%;
+  }
+  
+  #itemso {
+    position: absolute;
+    z-index: 70;
+    max-width: 32%;
+    margin: -10% 20% 0% 23% ;
+  } /* imagenes pequeñas que no se muestra hasta el doble click*/
+
+  #itemso div:hover {
+    cursor: url("pointer.png"), auto;
+    filter: invert(20%) sepia(0%) saturate(60%) hue-rotate(0deg) brightness(144%) contrast(100%);
+  } /*filter para poner un color encima de un div o imagen*/
+
+
+   .tenni {
+      margin-right: 5%;
+   }
+
+  .big div img, .small div img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+
+  .small {
+     display: flex;
+     justify-content: space-between;
+     width: 107%;
+  }
+
+  .small div img{
+    max-width: 75%;
+    margin: 25% 0%;
+  }
+
+  .items:hover {
+    cursor: url("pointer.png"), auto;
+    filter: invert(20%) sepia(0%) saturate(60%) hue-rotate(0deg) brightness(144%) contrast(100%);
+  }
+
+  .text {
+    max-width: 40%;
+    margin: 7% 0% 0% 8%;
+  }
+
+  .text1 h2 {
+    color: hsl(26, 100%, 55%);
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.12ch;
+  }
+  
+  .text1 h3 {
+    color: hsl(220, 13%, 13%);
+    font-weight: 800;
+    font-size: 45px;
+    margin-top: 0%;
+    letter-spacing: 0.04ch;
+  }
+
+  .text1 p {
+    color: hsl(219, 9%, 45%);;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: -1%;
+    line-height: 3ch;
+  }
+
+  .text2  h4{
+    color: hsl(220, 13%, 13%);
+    font-size: 27px;
+    letter-spacing: 0.1ch;
+    font-weight: 900;
+  }
+  
+  .text2  h4 span{
+    color: hsl(26, 100%, 55%);
+    font-size: 17px;
+    letter-spacing: 0.1ch;
+    font-weight: 700;
+    margin-left: 2%;
+    border-radius: 10px;
+    padding: 0.5%;
+    background-color: hsl(24, 59%, 93%);
+    position: absolute;
+  }
+  
+  .text2  p{
+   color: hsl(220, 14%, 75%);
+   font-weight: 700;
+   margin-top: -6%;
+   text-decoration: line-through;
+  }
+
+  .text3 {
+    width: 100%;
+    display: inline-flex;
+    margin-top: 5%;
+  }
+  
+  .text3a {
+    color: hsl(220, 13%, 13%);
+    font-weight: 700;
+    border-radius: 10px;
+    width: 37%;
+    display: inline-flex;
+    justify-content: space-around;
+    margin-right: 5%;
+    background-color: hsl(30, 20%, 96%);;
+  }
+  
+  .plus {
+    padding: 12% 0%;
+    width: 8%;
+  }
+
+  .minus {
+    height: 9%;
+    padding-top: 15%;
+  }
+
+  .plus:hover, .minus:hover {
+    filter: invert(20%) sepia(0%) saturate(60%) hue-rotate(0deg) brightness(144%) contrast(100%);
+    cursor: url("pointer.png"), auto;
+  }
+
+   button {
+     color: hsl(0, 0%, 100%);
+     font-weight: 700;
+     font-size: 16px;
+     background-color: hsl(26, 100%, 55%);
+     width: 250%;
+     height: 100%;
+     border-radius: 10px;
+     border-style: none;
+  }
+
+  button:hover {
+    filter: invert(20%) sepia(0%) saturate(60%) hue-rotate(0deg) brightness(144%) contrast(100%);
+    cursor: url("pointer.png"), auto;
+  }
+
+  button svg {
+    fill: white;
+    width: 5%;
+    height: 32%;
+    margin: 0% 10% 0% 0%;
+    overflow: visible; /* para que se vea la imagen cortada*/
+  } /* le quito el fill al svg y le pongo el color aqui*/
+   
+  
+@media (max-width: 600px ) {
+
+  body{
+    max-width: 375px;
+    margin: 0% 10%;
+  }
+
+  .black {
+    height: 150%;
+    z-index: 60;
+  }  
+
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 8%;
+    padding-bottom: 0%;
+    border-bottom: none;
+  }
+
+  .menu {
+    display: flex;
+    margin-right: 15%;
+  }
+
+  .menu img {
+     height: 55%;
+     margin-top: 25%;
+     cursor: url("pointer.png"), auto;
+  }
+
+  .logo {
+    width: 40%;
+    display: inline-flex;
+    justify-content: space-around;
+  }
+  
+  .item {
+    height: 70%;
+  }
+
+  .breadcrumbs {
+    position: absolute;
+    width: 40%;
+    height: 130%;
+    display: none;
+    justify-content:left;
+    margin: -4% 0% 0% -12%;
+    color: black;
+    background-color: white;
+    font-weight: 600;
+    z-index: 150;
+    padding: 15% 5%;
+  }
+  
+  .breadcrumbs p:hover {
+    border-bottom: none; 
+  } /* con position absolute en div parent y padding bottom creo este border*/
+
+  .breadcrumbs p {
+    margin-bottom: 15%;
+  }
+
+  #close2 {
+    display: block;
+    margin: -15% 0% 25% 0%;
+  }
+
+  #close2:hover {
+    cursor: url("pointer.png"), auto;
+  }
+
+
+  .car {
+    margin-right: 12%;
+  }
+
+  .cardhop  {
+    margin: 0% 0% 0% 0%;
+  }
+
+  .avatar img {
+    position: absolute;
+    width: 5%;
+    height: 3%;
+    margin: -1% 0% 0% 5%;
+  }
+
+  #globo {
+    height: 16px;
+    width: 4%;
+    margin-left: 1.5%;
+    margin-top: -2%;
+  }
+   
+  #span1 {
+    color: black;
+    font-weight: 700;
+  }
+
+  nav {
+    width: 74%;
+    height: 37%;
+    z-index: 120;
+    margin: 5% 0% 0% 2%;
+  }
+
+  #cartfull {
+    margin: 8% 5%;
+  }
+  
+  #cartfull p {
+    padding: 0% 10%;
+    color: hsl(219, 9%, 45%) ;
+    font-weight: 500;
+    margin-top: -0.5%;
+  }
+
+  #delete {
+   margin-top: -4%;
+   height: 40%;
+   padding: 8% 2%;
+  }
+
+  main {
+    display: inline-block;
+    margin: 0% 0% ;
+  }
+
+  .items {
+    display: none;
+  }
+
+  #icons {
+    display: flex;
+  }
+
+  .icons {
+    margin: 35% 0% 0% 0%;
+    z-index: 30;
+    width: 18%;
+    height: 6.7%;
+  }
+
+  .icons div {
+   padding: 21%;
+    margin-right: 320%;
+  }
+
+   .close {
+    display: none;
+  }
+
+  #imgg2 {
+    display: flex;
+  }
+  
+    .img2 {
+    display: flex;
+    max-width: 100%;
+    position: relative;
+    z-index: 20;
+    margin: 0% 0% 0% 0%;
+  } /* imagen grande que no se muestra hasta el doble click*/
+
+  #itemso {
+   display: none;
+  } 
+
+   .tenni {
+      margin-right: 0%;
+   }
+
+  .big div img, .small div img {
+    border-radius: 0px;
+  }
+
+  .small {
+     display: none;
+  }
+
+
+  .text {
+    max-width: 100%;
+    margin: 7% 5% 0% 5%;
+  }
+
+  .text1 h2 {
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.14ch;
+  }
+  
+  .text1 h3 {
+    font-weight: 900;
+    font-size: 30px;
+  }
+
+  .text1 p {
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: -2%;
+  }
+
+  .text2{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .text2  h4 span{
+    margin-left: 5%;
+    padding: 1.5%;
+  }
+  
+  .text2  p{
+   font-weight: 700;
+   margin: 12% 0% 0% 10%;
+  }
+
+  .text3 {
+    display: inline-block;
+    margin: 5% 0% 20% 0%;
+  }
+  
+  .text3a {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-right: 0%;
+  }
+  
+  .plus {
+    padding: 5% 5%;
+    width: 5%;
+    height: 1%;
+  }
+
+  .minus {
+    width: 5%;
+    height: 2%;
+    padding: 7% 5%;
+  }
+
+  .text3b {
+    margin-top: 5%;
+  }
+
+   button {
+     font-size: 18px;
+     width: 100%;
+     height: 60px;
+  }
+
+}
+
+
+@media (max-width: 1200px ) and (min-width: 801px)  {
+
+
+.breadcrumbs {
+  width: 37%;
+  margin: -1.2% 0% 0% 15%;
+}
+
+
+nav {
+  width: 33%;
+  height: 35%;
+}
+
+#icons {
+  display: none;
+}
+
+.icons {
+  margin: 15% 10% 10% 15%;
+}
+
+.text3 {
+  width: 100%;
+  display: inline-flex;
+  margin-top: 5%;
+}
+
+.text3a {
+  color: hsl(220, 13%, 13%);
+  font-weight: 700;
+  border-radius: 10px;
+  width: 50%;
+  display: inline-flex;
+  justify-content: space-around;
+  margin-right: 5%;
+  background-color: hsl(30, 20%, 96%);;
+}
+
+.plus {
+  padding: 13% 0%;
+  width: 8%;
+}
+
+.minus {
+  height: 9%;
+  padding-top: 16%;
+}
+
+
+ button {
+   width: 150%;
+}
+
+
+}

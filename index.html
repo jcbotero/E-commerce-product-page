@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/logo.svg">
+    <link href="./stsheet.css" rel="stylesheet">
+    <link rel="preconnect" href="./KumbhSans-VariableFont_wght.ttf">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Ecommerce Main Page</title>
+</head>
+<body id="body">
+      <header>
+         <section class="logo">
+            <h1 style="display:none;">Header</h1>
+            <article class="menu">
+                <img src="images/icon-menu.svg" alt="icon-menu" id="menu">
+            </article>
+            <img class="item" src="images/logo.svg" alt="logo">
+         </section>
+         <section class="breadcrumbs" id="breadcrumbs">
+            <img id="close2" src="images/icon-close.svg" alt="close2">
+            <p>Collections</p>
+            <p>Men</p>
+            <p>Woman</p>
+            <p>About</p>
+            <p>Contact</p>
+         </section>
+         <section class="car">
+             <div  class="cardhop">
+                <img class="item" src="images/icon-cart.svg" alt="icon-cart" onclick="cart()">
+            </div>
+            <div class="avatar">
+                <img class="item" src="images/image-avatar.png" alt="image-avatar"> 
+            </div>
+            <div id="globo" style="display:none;">
+            </div>
+      </header>
+      <nav id="nav" style="display:none;" onmouseleave="remove()">
+          <section>
+              <h2 style="display:none;">Shopping car</h2>
+              <p class="pa" id="pa">Cart</p>
+              <p class="pb" id="pb">Your cart is empty.</p>
+          </section>
+          <section id="cartfull" style="display:none;">
+               <article class="cart1">
+                  <img src="images/image-product-1-thumbnail.jpg" alt="image-product-1">
+                  <p>Fall Limited Edition Sneakers $125.00 x <span id="span1"></span></p>
+                  <img id="delete" src="images/icon-delete.svg" alt="icon-delete">
+               </article>
+               <article class="btnc">
+                 <button id="btncheck">Checkout</button>
+               </article>
+          </section>
+      </nav>
+      <main>
+           <section class="tenni">
+                <h2 style="display:none;">Main content</h2>
+                <article id="icons" class="icons">
+                     <div>
+                        <img src="images/icon-previous.svg" alt="minus" id="previous" onclick="move(-1)">
+                    </div>
+                     <div>
+                        <img src="images/icon-next.svg" alt="icon-next" id="next" onclick="move(1)">
+                    </div>
+                </article>
+                <article id="close" class="close" style="display:none;">
+                    <svg width="1517.38" height="985.57996" viewBox="0 0 958.69 592.78998" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="" fill-rule="evenodd"/></svg>
+                </article> <!--con width height en esta es escala de valores mas view box le incremento o reduzco el tamaño al svg-->
+                <article class="big" id="ligth">
+                    <div class="items">
+                        <img src="images/image-product-1.jpg" alt="image-product-1">
+                    </div>
+                    <div class="img2" id="imgg2">
+                        <img src="images/image-product-1.jpg" alt="image-product-1" >
+                    </div>
+                </article>
+                <article id="slider">
+                    <div style="display:none;" id="bb" class="img2">
+                        <img src="images/image-product-2.jpg" alt="pro2">
+                    </div>
+                    <div style="display: none;" id="cc" class="img2">
+                        <img src="images/image-product-3.jpg" alt="pro3">
+                    </div>
+                    <div style="display: none;" id="dd" class="img2">
+                        <img src="images/image-product-4.jpg" alt="pro4">
+                    </div>
+                </article>
+                <article class="small" >
+                    <div class="items" >
+                        <img src="images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
+                    </div>
+                    <div class="items">
+                        <img  src="images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail">
+                    </div>
+                    <div class="items">
+                        <img  src="images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail">
+                    </div>
+                    <div class="items">
+                        <img  src="images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail">
+                    </div>
+                </article>
+                <article class="small" id="itemso" style="display:none;">
+                    <div class="peke" id="a" >
+                        <img src="images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
+                    </div>
+                    <div class="peke" id="b">
+                        <img  src="images/image-product-2-thumbnail.jpg" alt="image-product-2-thumbnail">
+                    </div>
+                    <div class="peke" id="c">
+                        <img  src="images/image-product-3-thumbnail.jpg" alt="image-product-3-thumbnail">
+                    </div>
+                    <div class="peke" id="d">
+                        <img  src="images/image-product-4-thumbnail.jpg" alt="image-product-4-thumbnail">
+                    </div>
+                </article>
+           </section>
+           <section class="text">
+                <article class="text1">
+                    <h2>SNEAKER COMPANY</h2>
+                    <h3>Fall Limited Edition Sneakers</h3>
+                    <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+                </article>
+                <article class="text2">
+                    <h4>$125.00<span>50%</span></h4>
+                    <p>$250.00</p>
+                </article>
+                <article class="text3">
+                    <div class="text3a">
+                        <img class="minus" src="images/icon-minus.svg" alt="icon-minus" id="minus"> 
+                        <p id="field">0</p> 
+                        <img class="plus" src="images/icon-plus.svg" alt="icon-plus" id="plus">
+                    </div>
+                    <div class="text3b">
+                         <button id="addcart"> <svg width="5" height="3" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="" fill-rule="nonzero"/></svg> Add to cart</button> <!--mirar que si le puedo poner texto e imagen juntos en el boton-->
+                    </div>
+                </article>
+           </section>
+           <section style="display:none;" class="black">
+              <div></div>
+           </section>
+      </main>
+      <script src="./interact.js"> </script> 
+</body>
+</html>
